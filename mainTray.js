@@ -1,4 +1,3 @@
-// 点击窗口的关闭,后台依然存在,但是托盘的关闭可以关掉后台
 const { Tray, Menu } = require('electron')
 const path = require('path')
 function createTray(app, win) {
