@@ -24,10 +24,11 @@ const createWindow = () => {
     // 打开调试器
     win.webContents.openDevTools()
     winState.manage(win)
-    // 创建托盘,托盘的关闭可以关掉后台 
+    // 创建托盘 
     createTray(app, win)
 }
 app.whenReady().then(createWindow)
 app.on('window-all-closed', () => {
-    if (process.platform === 'darwin') app.quit()
+//     if (process.platform === 'darwin') app.quit()
+    app.quit()
 })
